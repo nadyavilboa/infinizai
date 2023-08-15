@@ -97,6 +97,7 @@ a {
 
 .page-header--dark {
     background: var(--basic-black);
+    z-index: 10;
 }
 
 .page-header__wrapper {
@@ -259,7 +260,7 @@ a {
 
 .banner__btn-wrapper {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
     align-items: center;
 }
 
@@ -296,13 +297,16 @@ a {
     border: none;
     background: transparent;
     padding: 0;
-    height: 60px;
+    height: max-content;
+}
+
+.character__btn .character__img {
+    border-radius: 20px;
     border: 6px solid transparent;
 }
 
-.character__btn--active {
-    border-radius: 20px;
-    border: 5px solid var(--border-gray);
+.character__btn--active .character__img {
+    border: 6px solid var(--border-gray);
 }
 
 .news {
@@ -317,8 +321,10 @@ a {
 }
 
 .news__item .news__item-img {
-    width: 300px;
+    width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .news__item .blue-text {
@@ -357,6 +363,14 @@ a {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+@media (min-width: 480px) {
+    .news__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 @media (min-width: 768px) {
@@ -470,6 +484,10 @@ a {
         margin: 0;
     }
 
+    .character__btn {
+        height: max-content;
+    }
+
     .news__header {
         display: flex;
         flex-direction: row;
@@ -535,8 +553,378 @@ a {
     }
 }
 
+@media (min-width: 1200px) {
+    .page-header {
+        padding: 20px 40px;
+    }
+
+    .page-header__left {
+        width: 55%;
+    }
+
+    .banner .container,
+    .character .container {
+        gap: 50px;
+    }
+
+    .banner__left-wrapper {
+        gap: 1.5rem;
+    }
+
+    .main-nav__list {
+        gap: 10%;
+    }
+
+    .menu__link {
+        text-transform: none;
+    }
+
+    .section-title {
+        font-size: 45px;
+        line-height: 55px;
+    }
+
+    .section-text,
+    .banner__link {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .section-text {
+        max-width: 600px;
+    }
+
+    .banner__left-wrapper,
+    .banner__right-wrapper {
+        padding: 175px 0 120px 40px;
+    }
+
+    .character {
+        padding: 0 40px;
+    }
+
+    .character__list {
+        justify-content: space-between;
+    }
+
+    .character__img {
+        height: 100%;
+    }
+
+    .news {
+        padding: 20px 40px;
+    }
+
+    .news__list {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr 0.5fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .news__list .news__item--top {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .news__list .news__item {
+        width: auto;
+    }
+
+    .page-footer {
+        padding: 20px 40px 40px 40px;
+    }
+}
+
 @media (min-width: 1440px) {
-    .container {
-        max-width: 1320;
+    .blue-text {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .page-header {
+        padding: 27px 60px;
+    }
+
+    .page-header__logo .logo-img {
+        width: 170px;
+        height: auto;
+    }
+
+    .page-header__left {
+        width: 52.4%;
+    }
+
+    .main-nav__list {
+        gap: 17%;
+        margin-top: -3px;
+    }
+
+    .menu__link {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .page-header__right {
+        gap: 23px;
+    }
+
+    .page-header__basket {
+        height: 32px;
+    }
+
+    .page-header__basket .amount-buy {
+        top: -8px;
+        right: -5px;
+    }
+
+    .basket-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .contact-btn-full {
+        font-size: 18px;
+        line-height: 30px;
+        padding: 15px 35px 15px 33px;
+    }
+
+    .banner .container,
+    .character .container {
+        gap: 100px;
+    }
+
+    .banner__left-wrapper {
+        padding: 296px 0 250px 60px;
+        width: 56%;
+    }
+
+    .banner__title {
+        font-size: 71px;
+        line-height: 86px;
+    }
+
+    .banner__right-wrapper {
+        padding: 339px 60px 250px 0;
+    }
+
+    .page-left-links {
+        position: absolute;
+        bottom: inherit;
+        left: -140px;
+        top: 522px;
+        transform: rotate(-90deg);
+        width: fit-content;
+        background: transparent;
+        display: flex;
+        gap: 49px;
+    }
+
+    .page-left-links .aside-link {
+        background: transparent;
+        color: var(--aside-link);
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 25px;
+    }
+
+    .banner__left-wrapper {
+        gap: 1rem;
+    }
+
+    .banner__title {
+        position: relative;
+        z-index: 2;
+    }
+
+    .banner__title::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 165px;
+        right: -7px;
+        z-index: 1;
+        width: 436px;
+        height: 17px;
+        background: url('img/yellow-line.png') no-repeat;
+    }
+
+    .banner__img {
+        margin-left: -8%;
+        transform: scale(1.15);
+    }
+
+    .banner__left-wrapper  .banner__title {
+        margin-bottom: 30px;
+    }
+
+    .banner__btn-wrapper {
+        margin-top: 34px;
+    }
+
+    .banner__link {
+        padding: 21px 34px;
+    }
+
+    .character {
+        padding: 0 60px;
+    }
+
+    .character .container {
+        gap: 127px;
+    }
+
+    .character__left-wrapper {
+        width: 82.7%;
+    }
+
+    .character__right-wrapper {
+        padding: 81px 0 80px 0;
+        gap: 1rem;
+    }
+
+    .character__right-wrapper .character__title {
+        font-size: 63px;
+        line-height: 74px;
+        margin-bottom: 21px;
+    }
+
+    .character__right-wrapper .character__text {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 37px;
+    }
+
+    .character__btn .character__img {
+        border: 11px solid transparent;
+    }
+
+    .character__btn--active .character__img {
+        border: 11px solid var(--border-gray);
+    }
+
+    .news {
+        padding: 130px 60px 110px;
+    }
+
+    .news__header {
+        margin-bottom: 47px;
+    }
+
+    .news__blue-text {
+        margin-bottom: 13px;
+    }
+
+    .news__title {
+        font-size: 64px;
+        line-height: 74px;
+    }
+
+    .news__header-right {
+        margin-top: 108px;
+    }
+
+    .news__header-link {
+        padding: 24px 34px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .news__list {
+        margin-top: 0;
+        gap: 12px;
+    }
+
+    .news__item:first-child {
+        gap: 25px;
+        margin-left: 0;
+    }
+
+    .news__item:first-child .news__item-img {
+        margin-bottom: 33px;
+    }
+
+    .news__item:first-child .blue-text {
+        font-size: 18px;
+        line-height: 18px;
+        text-transform: none;
+    }
+
+    .news__item:first-child .blue-text,
+    .news__item .blue-text {
+        font-size: 16px;
+        line-height: 16px;
+        text-transform: none;
+    }
+
+    .news__item:first-child .news__item-title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .news__item {
+        gap: 22px;
+        margin-left: 11px;
+    }
+
+    .news__item .news__item-img {
+        margin-bottom: 18px;
+    }
+
+    .news__item .blue-text {
+        margin-bottom: 0;
+    }
+
+    .news__item .news__item-title {
+        font-size: 23px;
+        line-height: 34px;
+    }
+
+    .news__item:nth-last-child(-n+2) {
+        margin-top: 13px;
+    }
+
+    .news__item:nth-last-child(-n+2) .news__item-img {
+        margin-bottom: 12px;
+    }
+
+    .page-footer {
+        padding: 130px 60px 150px 60px;
+    }
+
+    .page-footer .logo-img {
+        width: 170px;
+        height: 48px;
+        margin-bottom: 30px;
+    }
+
+    .page-footer__text {
+        font-size: 15px;
+        line-height: 25px;
+        max-width: 290px;
+    }
+
+    .page-footer .container {
+        gap: 154px;
+    }
+
+    .page-footer__part-title {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 22px;
+    }
+
+    .page-footer__links {
+        gap: 207px;
+    }
+
+    .page-footer__group-links {
+        gap: 0;
+    }
+
+    .page-footer__link {
+        font-size: 15px;
+        line-height: 37.5px;
     }
 }
