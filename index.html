@@ -5,13 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2 task</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body class="page-body">
     <header class="page-header">
@@ -41,7 +38,7 @@
                     <span class="visually-hidden">Open/close menu</span>
                 </button>
                 <a class="page-header__logo">
-                    <img class="logo-img" src="img/logo.png" width="120" height="34" alt="Logotype Infinizai"/>
+                    <img class="logo-img" src="img/logo.svg" width="120" height="34" alt="Logotype Infinizai"/>
                 </a>
                 <nav class="page-header__main-nav main-nav site-navigation site-navigation--off">
                     <ul class="main-nav__list menu list-reset">
@@ -66,7 +63,7 @@
             <div class="page-header__right">
                 <a class="page-header__basket" href="#" target="_blank">
                     <span class="visually-hidden">Basket</span>
-                    <img class="basket-icon" src="img/basket-icon.png" />
+                    <img class="basket-icon" src="img/basket.svg" />
                     <span class="amount-buy">0</span>
                 </a>
                 <a class="page-header__contact-link contact-btn" href="#" target="_blank">
@@ -78,7 +75,7 @@
     </header>
     <main class="page-main">
         <h1 class="visually-hidden">Infinizai Company - home page</h1>
-        <aside class="page-left-links">
+        <aside class="page-aside-links page-aside-links--mobile">
             <a class="aside-link" href="#" target="_blank">Facebook</a>
             <a class="aside-link" href="#" target="_blank">Instagram</a>
             <a class="aside-link" href="#" target="_blank">Twitter</a>
@@ -87,11 +84,11 @@
             <div class="container">
                 <div class="banner__left-wrapper">
                     <p class="banner__blue-text blue-text">
-                        <img class="blue-text__icon" src="img/fire.png" />
+                        <img class="blue-text__icon" src="img/fire.svg" />
                         <span>Future of esports</span>
                     </p>
                     <p class="banner__title section-title">
-                        Unleash The Next Generation Of Gaming
+                        Unleash The Next <span>Generation</span> Of Gaming
                     </p>
                     <p class="banner__text section-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -110,6 +107,11 @@
                 <div class="banner__right-wrapper">
                    <img class="banner__img" src="img/banner-img.png" />
                 </div>
+                <aside class="page-aside-links page-aside-links--desktop">
+                    <a class="aside-link" href="#" target="_blank">Facebook</a>
+                    <a class="aside-link" href="#" target="_blank">Instagram</a>
+                    <a class="aside-link" href="#" target="_blank">Twitter</a>
+                </aside>
             </div>
         </section>
         <section class="character">
@@ -119,7 +121,7 @@
                 </div>
                 <div class="character__right-wrapper">
                     <p class="character__blue-text blue-text">
-                        <img class="blue-text__icon" src="img/fire.png" />
+                        <img class="blue-text__icon" src="img/fire.svg" />
                         <span>Future of esports</span>
                     </p>
                     <p class="character__title section-title">
@@ -132,7 +134,7 @@
                     </p>
                     <ul class="character__list">
                         <li class="character__item">
-                            <button class="character__btn character__btn--active">
+                            <button class="character__btn character__btn--active" disabled>
                                 <img class="character__img" src="img/character-1.png" />
                             </button>
                         </li>
@@ -155,7 +157,7 @@
                 <header class="news__header">
                     <div class="news__header-left">
                         <p class="news__blue-text blue-text">
-                            <img class="blue-text__icon" src="img/fire.png" />
+                            <img class="blue-text__icon" src="img/fire.svg" />
                             <span>Future of esports</span>
                         </p>
                         <p class="news__title section-title">
@@ -169,39 +171,49 @@
                 </header>
                 <ul class="news__list">
                     <li class="news__item news__item--top">
-                        <img class="news__item-img" src="img/news-1.png" />
-                        <p class="blue-text">April 2, 2021</p>
-                        <p class="news__item-title">
-                            Esports Group Teams Up With The Indianapolis Colts
-                        </p>
+                        <a class="news__item-link" href="#" target="_blank">
+                            <img class="news__item-img" src="img/news-1.png" />
+                            <p class="blue-text">April 2, 2021</p>
+                            <p class="news__item-title">
+                                Esports Group Teams Up With The Indianapolis Colts
+                            </p>
+                        </a>
                     </li>
                     <li class="news__item">
-                        <img class="news__item-img" src="img/news-2.png" />
-                        <p class="blue-text">April 2, 2021</p>
-                        <p class="news__item-title">
-                            NAVI Reveals S1mple Fifth Anniversary
-                        </p>
+                        <a class="news__item-link" href="#" target="_blank">
+                            <img class="news__item-img" src="img/news-2.png" />
+                            <p class="blue-text">April 2, 2021</p>
+                            <p class="news__item-title">
+                                NAVI Reveals S1mple Fifth Anniversary
+                            </p>
+                        </a>
                     </li>
                     <li class="news__item">
-                        <img class="news__item-img" src="img/news-3.png" />
-                        <p class="blue-text">April 2, 2021</p>
-                        <p class="news__item-title">
-                            A1esports Shares New Picture
-                        </p>
+                        <a class="news__item-link" href="#" target="_blank">
+                            <img class="news__item-img" src="img/news-3.png" />
+                            <p class="blue-text">April 2, 2021</p>
+                            <p class="news__item-title">
+                                A1esports Shares New Picture
+                            </p>
+                        </a>
                     </li>
                     <li class="news__item">
-                        <img class="news__item-img" src="img/news-4.png" />
-                        <p class="blue-text">April 2, 2021</p>
-                        <p class="news__item-title">
-                            T1 Unveil Partnership With Razer
-                        </p>
+                        <a class="news__item-link" href="#" target="_blank">
+                            <img class="news__item-img" src="img/news-4.png" />
+                            <p class="blue-text">April 2, 2021</p>
+                            <p class="news__item-title">
+                                T1 Unveil Partnership With Razer
+                            </p>
+                        </a>
                     </li>
                     <li class="news__item">
-                        <img class="news__item-img" src="img/news-5.png" />
-                        <p class="blue-text">April 2, 2021</p>
-                        <p class="news__item-title">
-                            RX Secures Content Partnership With
-                        </p>
+                        <a class="news__item-link" href="#" target="_blank">
+                            <img class="news__item-img" src="img/news-5.png" />
+                            <p class="blue-text">April 2, 2021</p>
+                            <p class="news__item-title">
+                                RX Secures Content Partnership With
+                            </p>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -211,7 +223,7 @@
         <div class="container">
             <div class="page-footer__left">
                 <a class="page-footer__logo">
-                    <img class="logo-img" src="img/logo.png" width="120" height="34" alt="Logotype Infinizai"/>
+                    <img class="logo-img" src="img/logo.svg" width="120" height="34" alt="Logotype Infinizai"/>
                 </a>
                 <p class="page-footer__text">
                     Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl nunc quam ac sed turpis volutpat. Cursus sed massa non .

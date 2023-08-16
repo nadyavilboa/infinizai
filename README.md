@@ -1,1 +1,1 @@
-# infinizai
+# infinizai - лендинг игрового магазина
