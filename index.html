@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="img/152.png"/>
+    <link rel="manifest" href="manifest.webmanifest"/>
   </head>
   <body class="page-body">
     <header class="page-header">
@@ -63,11 +67,11 @@
             <div class="page-header__right">
                 <a class="page-header__basket" href="#" target="_blank">
                     <span class="visually-hidden">Basket</span>
-                    <img class="basket-icon" src="img/basket.svg" />
+                    <img class="basket-icon" src="img/basket.svg" alt=""/>
                     <span class="amount-buy">0</span>
                 </a>
                 <a class="page-header__contact-link contact-btn" href="#" target="_blank">
-                    <img class="contact-btn-mobile" src="img/phone-icon.png" />
+                    <img class="contact-btn-mobile" src="img/phone-icon.png" alt=""/>
                     <span class="contact-btn-full">Contact Us</span>
                 </a>
             </div>
@@ -82,9 +86,10 @@
         </aside>
         <section class="banner">
             <div class="container">
+                <h2 class="visually-hidden">Game team</h2>
                 <div class="banner__left-wrapper">
                     <p class="banner__blue-text blue-text">
-                        <img class="blue-text__icon" src="img/fire.svg" />
+                        <img class="blue-text__icon" src="img/fire.svg" alt=""/>
                         <span>Future of esports</span>
                     </p>
                     <p class="banner__title section-title">
@@ -105,7 +110,10 @@
                     </div>
                 </div>
                 <div class="banner__right-wrapper">
-                   <img class="banner__img" src="img/banner-img.png" />
+                    <picture>
+                        <source type="image/webp" srcset="img/banner-img.webp">
+                        <img class="banner__img" src="img/banner-img.png" alt="game image"/>
+                    </picture>
                 </div>
                 <aside class="page-aside-links page-aside-links--desktop">
                     <a class="aside-link" href="#" target="_blank">Facebook</a>
@@ -116,12 +124,18 @@
         </section>
         <section class="character">
             <div class="container">
+                <h2 class="visually-hidden">Choise character</h2>
                 <div class="character__left-wrapper">
-                    <img class="character__img" src="img/character-current.png" />
+                    <picture>
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/character-current.webp">
+                        <source type="image/webp" srcset="img/character-current-mobile.webp">
+                        <source media="(min-width: 768px)" srcset="img/character-current.png">
+                        <img class="character__img" src="img/character-current-mobile.png" alt="current character"/>
+                    </picture>
                 </div>
                 <div class="character__right-wrapper">
                     <p class="character__blue-text blue-text">
-                        <img class="blue-text__icon" src="img/fire.svg" />
+                        <img class="blue-text__icon" src="img/fire.svg" alt=""/>
                         <span>Future of esports</span>
                     </p>
                     <p class="character__title section-title">
@@ -135,17 +149,26 @@
                     <ul class="character__list">
                         <li class="character__item">
                             <button class="character__btn character__btn--active" disabled>
-                                <img class="character__img" src="img/character-1.png" />
+                                <picture>
+                                    <source type="image/webp" srcset="img/character-1.webp">
+                                    <img class="character__img" src="img/character-1.png" alt="character one"/>
+                                </picture>
                             </button>
                         </li>
                         <li class="character__item">
                             <button class="character__btn">
-                                <img class="character__img" src="img/character-2.png" />
+                                <picture>
+                                    <source type="image/webp" srcset="img/character-2.webp">
+                                    <img class="character__img" src="img/character-2.png" alt="character two"/>
+                                </picture>
                             </button>
                         </li>
                         <li class="character__item">
                             <button class="character__btn">
-                                <img class="character__img" src="img/character-3.png" />
+                                <picture>
+                                    <source type="image/webp" srcset="img/character-3.webp">
+                                    <img class="character__img" src="img/character-3.png" alt="character three"/>
+                                </picture>
                             </button>
                         </li>
                     </ul>
@@ -154,10 +177,11 @@
         </section>
         <section class="news">
             <div class="container">
+                <h2 class="visually-hidden">Read our news</h2>
                 <header class="news__header">
                     <div class="news__header-left">
                         <p class="news__blue-text blue-text">
-                            <img class="blue-text__icon" src="img/fire.svg" />
+                            <img class="blue-text__icon" src="img/fire.svg" alt=""/>
                             <span>Future of esports</span>
                         </p>
                         <p class="news__title section-title">
@@ -172,7 +196,12 @@
                 <ul class="news__list">
                     <li class="news__item news__item--top">
                         <a class="news__item-link" href="#" target="_blank">
-                            <img class="news__item-img" src="img/news-1.png" />
+                            <picture>
+                                <source type="image/webp" media="(min-width: 768px)" srcset="img/news-1.webp">
+                                <source type="image/webp" srcset="img/news-1-mobile.webp">
+                                <source media="(min-width: 768px)" srcset="img/news-1.png">
+                                <img class="news__item-img" src="img/news-1-mobile.png" alt="top news article"/>
+                            </picture>
                             <p class="blue-text">April 2, 2021</p>
                             <p class="news__item-title">
                                 Esports Group Teams Up With The Indianapolis Colts
@@ -181,7 +210,10 @@
                     </li>
                     <li class="news__item">
                         <a class="news__item-link" href="#" target="_blank">
-                            <img class="news__item-img" src="img/news-2.png" />
+                            <picture>
+                                <source type="image/webp" srcset="img/news-2.webp">
+                                <img class="news__item-img" src="img/news-2.png" alt="news article"/>
+                            </picture>
                             <p class="blue-text">April 2, 2021</p>
                             <p class="news__item-title">
                                 NAVI Reveals S1mple Fifth Anniversary
@@ -190,7 +222,10 @@
                     </li>
                     <li class="news__item">
                         <a class="news__item-link" href="#" target="_blank">
-                            <img class="news__item-img" src="img/news-3.png" />
+                            <picture>
+                                <source type="image/webp" srcset="img/news-3.webp">
+                                <img class="news__item-img" src="img/news-3.png" alt="news article"/>
+                            </picture>
                             <p class="blue-text">April 2, 2021</p>
                             <p class="news__item-title">
                                 A1esports Shares New Picture
@@ -199,7 +234,10 @@
                     </li>
                     <li class="news__item">
                         <a class="news__item-link" href="#" target="_blank">
-                            <img class="news__item-img" src="img/news-4.png" />
+                            <picture>
+                                <source type="image/webp" srcset="img/news-4.webp">
+                                <img class="news__item-img" src="img/news-4.png" alt="news article"/>
+                            </picture>
                             <p class="blue-text">April 2, 2021</p>
                             <p class="news__item-title">
                                 T1 Unveil Partnership With Razer
@@ -208,7 +246,10 @@
                     </li>
                     <li class="news__item">
                         <a class="news__item-link" href="#" target="_blank">
-                            <img class="news__item-img" src="img/news-5.png" />
+                            <picture>
+                                <source type="image/webp" srcset="img/news-5.webp">
+                                <img class="news__item-img" src="img/news-5.png" alt="news article"/>
+                            </picture>
                             <p class="blue-text">April 2, 2021</p>
                             <p class="news__item-title">
                                 RX Secures Content Partnership With
